@@ -212,12 +212,19 @@
           <a href="#" onclick="alert('📘 Medium coming soon!')">📘</a>
         </div>
         <p style="opacity: 0.7">
-          © 2024 BaseBot. All rights reserved. To the moon! 🚀
+          © <span id="current-year"></span> BaseBot. All rights reserved.
+          To the moon! 🚀
         </p>
       </div>
     </footer>
 
     <script src="./main.js"></script>
     <script src="./helpers/help.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("current-year").textContent =
+          new Date().getFullYear();
+      });
+    </script>
   </body>
 </html>
